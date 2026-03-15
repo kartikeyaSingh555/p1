@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>{{ event[1] }} - Blogs</h1>
+
+    {% if session['role'] == 'Admin' %}
+        <a href="/add_blog/{{ event[0] }}">✍️ Add New Blog</a>
+    {% endif %}
+
+    <hr>
+
+    {% for b in blogs %}
+        <div class="blog-card">
+            <h2>{{ b[2] }}</h2>
+            <small>Posted on {{ b[4] }}</small>
+            <p>{{ b[3] }}</p>
+        </div>
+    {% else %}
+        <p>No blogs yet.</p>
+    {% endfor %}
+
+    <br>
+    <a href="/events">⬅ Back to Events</a>
+</body>
+</html>

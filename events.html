@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1 style="color: red;">University Events</h1>
+
+    {% if session['role'] == 'Admin' %}
+        <a href="/add_event" style="color: red;">➕ Add Event</a>
+    {% endif %}
+<div class="event-container">
+    {% for e in events %}
+    <div class="event-card">
+        <h3>{{ e[1] }}</h3>
+        <p>{{ e[2] }}</p>
+        <small>Date: {{ e[3] }}</small><br><br>
+
+        <a href="/blogs/{{ e[0] }}">View Blogs</a>
+
+        {% if session['role'] == 'Admin' %}
+            | <a href="/add_blog/{{ e[0] }}">Add Blog</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+
+    <br>
+    <a href="/home" style="color: red;">⬅ Back</a>
+</body>
+</html>

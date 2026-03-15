@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | University Portal</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="home-bg">
+
+    <!-- College Logo -->
+    <img src="/static/images/clg_building.jpg" class="clg-logo" alt="Vignan's Logo">
+
+    <div class="home-box">
+        <h1>🎓 University Blogging Portal</h1>
+        <h2>Welcome, {{ session['username'] }}</h2>
+        <p><strong>Role:</strong> {{ session['role'] }}</p>
+
+        <div class="home-links">
+            <a href="/events">📅 View Events</a>
+
+            {% if session['role'] == 'Admin' %}
+                <a href="/add_event">➕ Add Event</a>
+            {% endif %}
+
+            <a href="/logout">🚪 Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>

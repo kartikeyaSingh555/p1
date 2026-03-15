@@ -1,0 +1,163 @@
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    min-height: 100vh;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #4e54c8;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    color: #4e54c8;
+}
+
+/* ---------- AUTH (LOGIN / SIGNUP) ---------- */
+.auth-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-box {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-box input,
+.auth-box select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-box button:hover {
+    opacity: 0.9;
+}
+
+/* ---------- HOME ---------- */
+.home-box {
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.home-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background: #cfab3f;
+    color: white;
+    border-radius: 8px;
+}
+
+/* ---------- EVENTS ---------- */
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    margin-top: 0;
+}
+
+/* ---------- BLOGS ---------- */
+.blog-card {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.blog-card h2 {
+    margin-top: 0;
+}
+
+/* ---------- FORMS ---------- */
+form input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ---------- LINKS ---------- */
+a:hover {
+    text-decoration: underline;
+}
+/* ---------- HOME BACKGROUND (COLLEGE) ---------- */
+.home-bg {
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../images/vignans_logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* ---------- COLLEGE LOGO ---------- */
+.clg-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 180px;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
